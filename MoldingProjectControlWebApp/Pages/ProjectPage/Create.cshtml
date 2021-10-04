@@ -73,7 +73,15 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
         $(document).ready(function () {
-            $("#projectMold-dropdown").multiselect({ enableFiltering: true });
+            $("#projectMold-dropdown").multiselect({
+                enableFiltering: true,
+                buttonWidth: '100%',
+                buttonClass: 'btn btn-outline-secondary',
+                nonSelectedText: 'موردی انتخاب نشده',
+                filterPlaceholder: 'جستجو',
+                allSelectedText: "همه موارد انتخاب شده",
+                nSelectedText: "مورد انتخاب شده",
+            });
         });
     </script>
 }

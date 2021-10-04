@@ -43,7 +43,15 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
         $(document).ready(function () {
-            $("#moldWorkpiece-dropdown").multiselect({ enableFiltering: true });
+            $("#moldWorkpiece-dropdown").multiselect({
+                enableFiltering: true,
+                buttonWidth: '100%',
+                buttonClass: 'btn btn-outline-secondary',
+                nonSelectedText: 'موردی انتخاب نشده',
+                filterPlaceholder: 'جستجو',
+                allSelectedText: "همه موارد انتخاب شده",
+                nSelectedText: "مورد انتخاب شده",
+            });
         });
     </script>
 }
